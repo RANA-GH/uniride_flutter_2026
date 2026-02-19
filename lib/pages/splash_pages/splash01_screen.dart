@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniride/pages/onboarding_screen.dart';
+import 'package:uniride/pages/splash_pages/splash02_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,10 +11,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const OnboardingScreen()),
+        MaterialPageRoute(builder: (context) =>  Splash02Screen()),
       );
     });
   }
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: const Color(0xFFCF8307),
       body: Center(
         child: Image.asset(
-          'lib/image/logo.png',
+          'assets/images/logo.png',
           width: screenWidth * 0.47,
           height: screenHeight * 0.47 * (193 / 176.73),
           fit: BoxFit.contain,
