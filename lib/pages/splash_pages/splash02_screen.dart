@@ -1,6 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:uniride/pages/onboarding_pages/screens/onboarding01_screen.dart';
+import 'package:uniride/pages/splash_pages/splash01_screen.dart';
 
 class Splash02Screen extends StatefulWidget {
   const Splash02Screen({super.key});
@@ -73,7 +75,12 @@ Align(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Onboarding01Screen()),
+                      );
+                    },
                     child: Container(
                       width: double.infinity,
                       height: 56,
