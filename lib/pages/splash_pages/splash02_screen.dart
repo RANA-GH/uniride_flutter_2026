@@ -2,9 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class Splash02Screen extends StatelessWidget {
+class Splash02Screen extends StatefulWidget {
   const Splash02Screen({super.key});
 
+  @override
+  State<Splash02Screen> createState() => _Splash02ScreenState();
+}
+
+class _Splash02ScreenState extends State<Splash02Screen> {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
