@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 class OnboardingWidget extends StatelessWidget {
   final String title;
 
-  const OnboardingWidget({
-    super.key,
-    required this.title,
-  });
+  const OnboardingWidget({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +19,9 @@ class OnboardingWidget extends StatelessWidget {
             fontSize: 24,
             fontFamily: 'Inter',
             fontWeight: FontWeight.w500,
-            height: 1.20,
+            fontStyle: FontStyle.normal,
+            height: 1.2,
+            letterSpacing: 0,
           ),
         ),
         SizedBox(height: 12),
@@ -36,10 +35,12 @@ class OnboardingWidget extends StatelessWidget {
                 fontSize: 16,
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
-                height: 1.50,
+                fontStyle: FontStyle.normal,
+                height: 24 / 16,
+                letterSpacing: 0,
               ),
             ),
-              Text(
+            Text(
               ' and reliable transport for every university day. ',
               textAlign: TextAlign.center,
               style: TextStyle(

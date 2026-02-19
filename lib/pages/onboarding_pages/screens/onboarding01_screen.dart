@@ -12,12 +12,19 @@ class _Onboarding01ScreenState extends State<Onboarding01Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 222 , left: 32 , right: 32  , bottom: 220),
-        child: OnboardingWidget(
-          title: 'Smart Campus Transportation',
-        ),
+  body: SingleChildScrollView(
+    child: Padding(
+      padding: const EdgeInsets.only(
+        top: 222,
+        left: 32,
+        right: 32,
+        bottom: 220,
       ),
-    );
+      child: OnboardingWidget(
+        title: 'Smart Campus Transportation',
+      ),
+    ),
+  ),
+);
   }
 }
