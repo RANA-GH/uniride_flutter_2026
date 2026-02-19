@@ -41,6 +41,7 @@ class OnboardingWidget extends StatelessWidget {
             ),
           ),
       
+      
           const SizedBox(height: 12),
       
           /// 🔹 Description
