@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/CircleArrowButton_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/onboarding_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/tobBar_widget.dart';
@@ -40,12 +41,10 @@ class _Onboarding01ScreenState extends State<Onboarding01Screen> {
                 child: CircleArrowButton(
                   progress: 0.33,
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => const Onboarding02Screen(),
-                      ),
-                    );
+                       Routes.onBoarding02 ,
+                       );
                   },
                 ),
               ),
