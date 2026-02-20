@@ -1,13 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:provider/provider.dart';
 import 'package:uniride/core/providers/app_language_provider.dart';
 import 'package:uniride/core/widgets/Language_ToggleButton_widget.dart';
-=======
-import 'package:uniride/core/app_routes/routes.dart';
->>>>>>> 67f395a7fb5ec40b42394eb34fa58bd2cb82e6e1
 import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
 import 'package:uniride/l10n/app_localizations.dart';
 
@@ -36,14 +32,6 @@ class _Splash02ScreenState extends State<Splash02Screen> {
             ),
           ),
 
-<<<<<<< HEAD
-          Align(
-            alignment: Alignment.topRight,
-            child: Padding(
-              padding: EdgeInsets.only(top: 40, right: 24),
-              child: LanguageToggleButton(),
-=======
-          // مربع اللغة العربي
           Align(
             alignment: Alignment.topRight,
             child: Container(
@@ -89,7 +77,6 @@ class _Splash02ScreenState extends State<Splash02Screen> {
                   Icon(Icons.language, color: Color(0xFFFDD35C), size: 16),
                 ],
               ),
->>>>>>> 67f395a7fb5ec40b42394eb34fa58bd2cb82e6e1
             ),
           ),
 
@@ -102,16 +89,11 @@ class _Splash02ScreenState extends State<Splash02Screen> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(
+                      Navigator.push(
                         context,
-<<<<<<< HEAD
                         MaterialPageRoute(
                           builder: (context) => const Onboarding01Screen(),
                         ),
-=======
-                        Routes.onBoarding01,
-                        arguments: {'withFade': true},
->>>>>>> 67f395a7fb5ec40b42394eb34fa58bd2cb82e6e1
                       );
                     },
                     child: Container(
