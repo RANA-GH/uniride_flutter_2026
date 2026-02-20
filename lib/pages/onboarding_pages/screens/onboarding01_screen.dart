@@ -20,11 +20,11 @@ class _Onboarding01ScreenState extends State<Onboarding01Screen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
- padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.053),
+          padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.053),
           child: Column(
             children: [
-TopBar(),
-               SizedBox(height: screenHeight * 0.068),
+              TopBar(),
+              SizedBox(height: screenHeight * 0.068),
 
               /// 🔹 Content (Reusable Widget)
               const OnboardingWidget(
@@ -34,23 +34,23 @@ TopBar(),
                     'Seamless booking, real-time tracking, and reliable transport for every university day.',
               ),
 
-             SizedBox(height: screenHeight * (80 / 932)),
+              SizedBox(height: screenHeight * (80 / 932)),
 
               Center(
-      child: CircleArrowButton(
-        progress: 0.33,
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Onboarding02Screen(),
-            ),
-          );
-        },
-      ),
-    ),
+                child: CircleArrowButton(
+                  progress: 0.33,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Onboarding02Screen(),
+                      ),
+                    );
+                  },
+                ),
+              ),
 
-             SizedBox(height: screenHeight * 0.15), 
+              SizedBox(height: screenHeight * 0.15),
             ],
           ),
         ),
