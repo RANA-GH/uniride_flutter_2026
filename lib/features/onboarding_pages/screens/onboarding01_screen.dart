@@ -3,7 +3,6 @@ import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/CircleArrowButton_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/onboarding_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/tobBar_widget.dart';
-import 'package:uniride/features/onboarding_pages/screens/onboarding02_screen.dart';
 
 class Onboarding01Screen extends StatefulWidget {
   const Onboarding01Screen({super.key});
