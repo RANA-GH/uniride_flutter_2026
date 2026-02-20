@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
 import 'package:uniride/features/splash_pages/splash01_screen.dart';
 
@@ -30,42 +31,54 @@ class _Splash02ScreenState extends State<Splash02Screen> {
             ),
           ),
 
-       // مربع اللغة العربي
-Align(
-  alignment: Alignment.topRight,
-  child: Container(
-    margin: const EdgeInsets.only(top: 40, right: 24), // مساحة خارجية
-    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5), // مساحة داخلية
-    decoration: ShapeDecoration(
-      color: const Color(0xCCFFFEFE),
-      shape: RoundedRectangleBorder(
-        side: const BorderSide(width: 1, color: Color(0xFFE0E0E0)),
-        borderRadius: BorderRadius.circular(100),
-      ),
-      shadows: const [
-        BoxShadow(color: Color(0x19000000), blurRadius: 3, offset: Offset(0, 1)),
-        BoxShadow(color: Color(0x19000000), blurRadius: 2, offset: Offset(0, 1), spreadRadius: -1),
-      ],
-    ),
-    child: Row(
-      mainAxisSize: MainAxisSize.min,
-      children: const [
-        Text(
-          'عربي',
-          style: TextStyle(
-            color: Color(0xFF757575),
-            fontSize: 12,
-            fontFamily: 'Inter', 
-            fontWeight: FontWeight.w500,
-            height: 1.2,
+          // مربع اللغة العربي
+          Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              margin: const EdgeInsets.only(top: 40, right: 24), // مساحة خارجية
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 5,
+              ), // مساحة داخلية
+              decoration: ShapeDecoration(
+                color: const Color(0xCCFFFEFE),
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 1, color: Color(0xFFE0E0E0)),
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                shadows: const [
+                  BoxShadow(
+                    color: Color(0x19000000),
+                    blurRadius: 3,
+                    offset: Offset(0, 1),
+                  ),
+                  BoxShadow(
+                    color: Color(0x19000000),
+                    blurRadius: 2,
+                    offset: Offset(0, 1),
+                    spreadRadius: -1,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Text(
+                    'عربي',
+                    style: TextStyle(
+                      color: Color(0xFF757575),
+                      fontSize: 12,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w500,
+                      height: 1.2,
+                    ),
+                  ),
+                  SizedBox(width: 4),
+                  Icon(Icons.language, color: Color(0xFFFDD35C), size: 16),
+                ],
+              ),
+            ),
           ),
-        ),
-        SizedBox(width: 4),
-        Icon(Icons.language, color: Color(0xFFFDD35C), size: 16),
-      ],
-    ),
-  ),
-),
 
           Align(
             alignment: Alignment.bottomCenter,
@@ -76,9 +89,10 @@ Align(
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushNamed(
                         context,
-                        MaterialPageRoute(builder: (context) => const Onboarding01Screen()),
+                        Routes.onBoarding01,
+                        arguments: {'withFade': true},
                       );
                     },
                     child: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/core/theme/app_colors.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/CircleArrowButton_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/onboarding_widget.dart';
@@ -39,12 +40,7 @@ class Onboarding03Screen extends StatelessWidget {
                 child: CircleArrowButton(
                   progress: 1.0,
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SignUpScreen(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, Routes.signup);
                   },
                 ),
               ),
