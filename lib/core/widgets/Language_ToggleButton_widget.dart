@@ -12,10 +12,13 @@ class LanguageToggleButton extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        Provider.of<AppLanguageProvider>(
+        final provider = Provider.of<AppLanguageProvider>(
           context,
           listen: false,
-        ).changeLanguage(isArabic ? 'en' : 'ar');
+        );
+        provider.changeLanguage(provider.appLanguage == 'ar' ? 'en' : 'ar');
+        
+        (context as Element).markNeedsBuild();
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),

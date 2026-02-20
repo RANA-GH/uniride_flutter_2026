@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-
-
 class AppLanguageProvider extends ChangeNotifier {
   String appLanguage = 'en';
 
+  Locale get currentLocale => Locale(appLanguage);
+
   void changeLanguage(String language) {
-    if (language == appLanguage) return; //انهي الفانكشن لا تعمل شي 
-    appLanguage = language;//اذا مش نفس بعض غير اللغة حسب الي اختارت 
+    if (language == appLanguage) return;
+    appLanguage = language;
     notifyListeners();
   }
 }
