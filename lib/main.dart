@@ -23,20 +23,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AppLanguageProvider>(
-      builder: (context, languagePro, child) {
-        var themePro = Provider.of<AppThemeProvider>(context);
-        return MaterialApp(
-          locale: Locale(languagePro.appLanguage),
-          supportedLocales: AppLocalizations.supportedLocales,
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          themeMode: themePro.appTheme,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
-          debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
-        );
-      },
+    return ChangeNotifierProvider(
+      create: (_) => AppLanguageProvider(),
+      child: Consumer<AppLanguageProvider>(
+        builder: (context, languagePro, child) {
+          var themePro = Provider.of<AppThemeProvider>(context);
+          return MaterialApp(
+            locale: Locale(languagePro.appLanguage),
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            themeMode: themePro.appTheme,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            debugShowCheckedModeBanner: false,
+            home: SplashScreen(),
+          );
+        },
+      ),
     );
   }
 }

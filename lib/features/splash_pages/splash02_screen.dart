@@ -39,7 +39,7 @@ class _Splash02ScreenState extends State<Splash02Screen> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 10,
                 vertical: 5,
-              ), // مساحة داخلية
+              ), 
               decoration: ShapeDecoration(
                 color: const Color(0xCCFFFEFE),
                 shape: RoundedRectangleBorder(
@@ -60,23 +60,7 @@ class _Splash02ScreenState extends State<Splash02Screen> {
                   ),
                 ],
               ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Text(
-                    'عربي',
-                    style: TextStyle(
-                      color: Color(0xFF757575),
-                      fontSize: 12,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w500,
-                      height: 1.2,
-                    ),
-                  ),
-                  SizedBox(width: 4),
-                  Icon(Icons.language, color: Color(0xFFFDD35C), size: 16),
-                ],
-              ),
+              child: LanguageToggleButton(),
             ),
           ),
 
