@@ -18,13 +18,13 @@ class OnboardingWidget extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     return Expanded(
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           /// 🔹 Image
           Image.asset(image, width: screenWidth * 0.75),
-      
+
           const SizedBox(height: 40),
-      
+
           /// 🔹 Title
           FittedBox(
             fit: BoxFit.scaleDown,
@@ -40,15 +40,14 @@ class OnboardingWidget extends StatelessWidget {
               ),
             ),
           ),
-      
-      
+
           const SizedBox(height: 12),
-      
+
           /// 🔹 Description
           SizedBox(
             width: screenWidth * 0.75,
             child: Text(
-              description,
+              'Seamless booking, real-time tracking, and reliable transport for every university day.',
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Color(0xFF212121),

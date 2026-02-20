@@ -10,6 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   dio: ^5.9.1
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  provider: ^6.1.5+1
 
 dev_dependencies:
   flutter_test:
@@ -18,6 +22,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/images/
 
@@ -29,4 +34,3 @@ flutter:
 
         - asset: assets/fonts/Inter_24pt-Medium.ttf
           weight: 500
-       

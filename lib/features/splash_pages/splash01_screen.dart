@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniride/pages/splash_pages/splash02_screen.dart';
+import 'package:uniride/features/splash_pages/splash02_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
