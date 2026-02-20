@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uniride/core/theme/app_colors.dart';
-import 'package:uniride/pages/onboarding_pages/presentation/widgets/CircleArrowButton_widget.dart';
-import 'package:uniride/pages/onboarding_pages/presentation/widgets/onboarding_widget.dart';
-import 'package:uniride/pages/onboarding_pages/presentation/widgets/tobBar_widget.dart';
-import 'package:uniride/pages/onboarding_pages/screens/onboarding03_screen.dart';
+import 'package:uniride/features/onboarding_pages/presentation/widgets/CircleArrowButton_widget.dart';
+import 'package:uniride/features/onboarding_pages/presentation/widgets/onboarding_widget.dart';
+import 'package:uniride/features/onboarding_pages/presentation/widgets/tobBar_widget.dart';
+import 'package:uniride/features/onboarding_pages/screens/onboarding03_screen.dart';
 class Onboarding02Screen extends StatefulWidget {
   const Onboarding02Screen({super.key});
 

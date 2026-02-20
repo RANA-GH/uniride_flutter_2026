@@ -1,8 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:uniride/pages/onboarding_pages/screens/onboarding01_screen.dart';
-import 'package:uniride/pages/splash_pages/splash01_screen.dart';
+import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
+import 'package:uniride/features/splash_pages/splash01_screen.dart';
 
 class Splash02Screen extends StatefulWidget {
   const Splash02Screen({super.key});
