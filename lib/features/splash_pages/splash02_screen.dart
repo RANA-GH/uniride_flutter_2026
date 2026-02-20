@@ -1,7 +1,10 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:uniride/core/app_routes/routes.dart';
+import 'package:provider/provider.dart';
+import 'package:uniride/core/providers/app_language_provider.dart';
+import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
+import 'package:uniride/l10n/app_localizations.dart';
 
 class Splash02Screen extends StatefulWidget {
   const Splash02Screen({super.key});
@@ -28,7 +31,6 @@ class _Splash02ScreenState extends State<Splash02Screen> {
             ),
           ),
 
-          // مربع اللغة العربي
           Align(
             alignment: Alignment.topRight,
             child: Container(
@@ -86,10 +88,11 @@ class _Splash02ScreenState extends State<Splash02Screen> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(
+                      Navigator.push(
                         context,
-                        Routes.onBoarding01,
-                        arguments: {'withFade': true},
+                        MaterialPageRoute(
+                          builder: (context) => const Onboarding01Screen(),
+                        ),
                       );
                     },
                     child: Container(
@@ -97,80 +100,55 @@ class _Splash02ScreenState extends State<Splash02Screen> {
                       height: 56,
                       decoration: ShapeDecoration(
                         color: Colors.white.withOpacity(0.2),
-
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      child: Stack(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Align(
-                            alignment: Alignment.center,
-
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              spacing: 8,
-                              children: [
-                                SizedBox(
-                                  child: Text(
-                                    'Get Started',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: const Color(0xFFCF8307),
-                                      fontSize: 18,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w700,
-                                      height: 1.20,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(width: 8),
-                                Icon(
-                                  Icons.arrow_forward,
+                          Consumer<AppLanguageProvider>(
+                            builder: (context, languagePro, child) {
+                              return Text(
+                                AppLocalizations.of(context)!.getstarted,
+                                style: TextStyle(
                                   color: Color(0xFFCF8307),
+                                  fontSize: 18,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.20,
                                 ),
-                              ],
-                            ),
+                              );
+                            },
                           ),
+                          SizedBox(width: 8),
+                          Icon(Icons.arrow_forward, color: Color(0xFFCF8307)),
                         ],
                       ),
                     ),
                   ),
 
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 8),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      SizedBox(
-                        width: 70,
-                        height: 15,
-                        child: Text(
-                          'Powered by',
-                          style: TextStyle(
-                            color: const Color(0xFF757575),
-                            fontSize: 12,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w400,
-                            height: 1.33,
-                          ),
+                      Text(
+                        'Powered by ',
+                        style: TextStyle(
+                          color: Color(0xFF757575),
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: 110,
-                        height: 15,
-                        child: Text(
-                          'PTUK Engineering',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w700,
-                            height: 1.33,
-                          ),
+                      Text(
+                        'PTUK Engineering',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                     ],

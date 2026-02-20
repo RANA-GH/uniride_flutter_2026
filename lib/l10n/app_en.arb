@@ -1,0 +1,23 @@
+{
+    "appTitle": "My Flutter App",
+    "welcomeMessage": "Welcome to my Flutter app!",
+    "loginButton": "Log In",
+    "signupButton": "Sign Up",
+    "logoutButton": "Log Out",
+    "homeScreenTitle": "Home",
+    "settingsScreenTitle": "Settings",
+    "profileScreenTitle": "Profile",
+    "lg": "Language",
+    "ar": "Arabic",
+    "en": "English",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "getstarted": "Get Started"
+
+  
+ 
+
+
+
+}

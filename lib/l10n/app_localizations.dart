@@ -93,6 +93,96 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[Locale('en')];
+
+  /// No description provided for @appTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My Flutter App'**
+  String get appTitle;
+
+  /// No description provided for @welcomeMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to my Flutter app!'**
+  String get welcomeMessage;
+
+  /// No description provided for @loginButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Log In'**
+  String get loginButton;
+
+  /// No description provided for @signupButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signupButton;
+
+  /// No description provided for @logoutButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Log Out'**
+  String get logoutButton;
+
+  /// No description provided for @homeScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeScreenTitle;
+
+  /// No description provided for @settingsScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsScreenTitle;
+
+  /// No description provided for @profileScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profileScreenTitle;
+
+  /// No description provided for @lg.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get lg;
+
+  /// No description provided for @ar.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get ar;
+
+  /// No description provided for @en.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get en;
+
+  /// No description provided for @theme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get theme;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
+
+  /// No description provided for @getstarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get getstarted;
 }
 
 class _AppLocalizationsDelegate
