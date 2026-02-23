@@ -39,7 +39,7 @@ class Onboarding03Screen extends StatelessWidget {
                 child: CircleArrowButton(
                   progress: 1.0,
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.signup);
+                    Navigator.pushNamed(context, Routes.signUp);
                   },
                   child: Center(
                     child: Text(

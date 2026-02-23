@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
@@ -93,7 +95,7 @@ class AppRouter {
               );
 
       // Sign Up Screen
-      case Routes.signup:
+      case Routes.signUp:
         return PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 1200),
           pageBuilder: (context, animation, secondaryAnimation) =>

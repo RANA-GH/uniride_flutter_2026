@@ -8,12 +8,11 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
+        SizedBox(
           width: 430,
           height: 1055,
           child: Stack(
@@ -45,7 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         blurRadius: 2,
                         offset: Offset(0, 1),
                         spreadRadius: -1,
-                      )
+                      ),
                     ],
                   ),
                   child: Stack(
@@ -111,7 +110,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                   'Student/Doctor',
                                                   textAlign: TextAlign.center,
                                                   style: TextStyle(
-                                                    color: const Color(0xFFCF8307),
+                                                    color: const Color(
+                                                      0xFFCF8307,
+                                                    ),
                                                     fontSize: 12,
                                                     fontFamily: 'Inter',
                                                     fontWeight: FontWeight.w700,
@@ -153,10 +154,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     'Driver',
                                                     textAlign: TextAlign.center,
                                                     style: TextStyle(
-                                                      color: const Color(0xFF757575),
+                                                      color: const Color(
+                                                        0xFF757575,
+                                                      ),
                                                       fontSize: 12,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w700,
+                                                      fontWeight:
+                                                          FontWeight.w700,
                                                       height: 1.33,
                                                     ),
                                                   ),
@@ -215,10 +219,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'Full Name',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 12,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.33,
                                                             ),
                                                           ),
@@ -231,7 +241,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 270.29,
                                                 top: 0,
-                                                child: Container(width: 58, height: 16),
+                                                child: Container(
+                                                  width: 58,
+                                                  height: 16,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -254,10 +267,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                   child: Text(
                                                     'As written in university records',
                                                     style: TextStyle(
-                                                      color: const Color(0xFF757575),
+                                                      color: const Color(
+                                                        0xFF757575,
+                                                      ),
                                                       fontSize: 10,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w400,
+                                                      fontWeight:
+                                                          FontWeight.w400,
                                                       height: 1.50,
                                                     ),
                                                   ),
@@ -286,9 +302,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     shape: RoundedRectangleBorder(
                                                       side: BorderSide(
                                                         width: 1,
-                                                        color: const Color(0xFFE0E0E0),
+                                                        color: const Color(
+                                                          0xFFE0E0E0,
+                                                        ),
                                                       ),
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            20,
+                                                          ),
                                                     ),
                                                   ),
                                                   child: Stack(
@@ -302,10 +323,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'Dua\'a Osama Khalaf',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 16,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w400,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
                                                               height: 1.50,
                                                             ),
                                                           ),
@@ -367,10 +394,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'University ID',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 12,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.33,
                                                             ),
                                                           ),
@@ -383,7 +416,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 260.81,
                                                 top: 0,
-                                                child: Container(width: 68, height: 16),
+                                                child: Container(
+                                                  width: 68,
+                                                  height: 16,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -406,10 +442,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                   child: Text(
                                                     'Enter your 9-digit PTUK ID ',
                                                     style: TextStyle(
-                                                      color: const Color(0xFF757575),
+                                                      color: const Color(
+                                                        0xFF757575,
+                                                      ),
                                                       fontSize: 10,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w400,
+                                                      fontWeight:
+                                                          FontWeight.w400,
                                                       height: 1.50,
                                                     ),
                                                   ),
@@ -438,9 +477,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     shape: RoundedRectangleBorder(
                                                       side: BorderSide(
                                                         width: 1,
-                                                        color: const Color(0xFFE0E0E0),
+                                                        color: const Color(
+                                                          0xFFE0E0E0,
+                                                        ),
                                                       ),
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            20,
+                                                          ),
                                                     ),
                                                   ),
                                                   child: Stack(
@@ -454,10 +498,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             '202110542',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 16,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w400,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
                                                               height: 1.50,
                                                             ),
                                                           ),
@@ -519,10 +569,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'Email Address',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 12,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.33,
                                                             ),
                                                           ),
@@ -535,7 +591,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 246.55,
                                                 top: 0,
-                                                child: Container(width: 82, height: 16),
+                                                child: Container(
+                                                  width: 82,
+                                                  height: 16,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -560,9 +619,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     shape: RoundedRectangleBorder(
                                                       side: BorderSide(
                                                         width: 1,
-                                                        color: const Color(0xFFE0E0E0),
+                                                        color: const Color(
+                                                          0xFFE0E0E0,
+                                                        ),
                                                       ),
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            20,
+                                                          ),
                                                     ),
                                                   ),
                                                   child: Stack(
@@ -576,10 +640,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'dua.osama@example.com',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 16,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w400,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
                                                               height: 1.50,
                                                             ),
                                                           ),
@@ -641,10 +711,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'Phone Number',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 12,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.33,
                                                             ),
                                                           ),
@@ -657,7 +733,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 278.07,
                                                 top: 0,
-                                                child: Container(width: 50, height: 16),
+                                                child: Container(
+                                                  width: 50,
+                                                  height: 16,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -682,9 +761,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     shape: RoundedRectangleBorder(
                                                       side: BorderSide(
                                                         width: 1,
-                                                        color: const Color(0xFFE0E0E0),
+                                                        color: const Color(
+                                                          0xFFE0E0E0,
+                                                        ),
                                                       ),
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            20,
+                                                          ),
                                                     ),
                                                   ),
                                                   child: Stack(
@@ -698,10 +782,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             '059XXXXXXX',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 16,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w400,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
                                                               height: 1.50,
                                                             ),
                                                           ),
@@ -763,10 +853,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'Password',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 12,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.33,
                                                             ),
                                                           ),
@@ -779,7 +875,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 279.09,
                                                 top: 0,
-                                                child: Container(width: 49, height: 16),
+                                                child: Container(
+                                                  width: 49,
+                                                  height: 16,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -802,10 +901,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                   child: Text(
                                                     'Minimum 8 characters ',
                                                     style: TextStyle(
-                                                      color: const Color(0xFF757575),
+                                                      color: const Color(
+                                                        0xFF757575,
+                                                      ),
                                                       fontSize: 10,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w400,
+                                                      fontWeight:
+                                                          FontWeight.w400,
                                                       height: 1.50,
                                                     ),
                                                   ),
@@ -834,9 +936,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     shape: RoundedRectangleBorder(
                                                       side: BorderSide(
                                                         width: 1,
-                                                        color: const Color(0xFFE0E0E0),
+                                                        color: const Color(
+                                                          0xFFE0E0E0,
+                                                        ),
                                                       ),
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            20,
+                                                          ),
                                                     ),
                                                   ),
                                                   child: Stack(
@@ -850,10 +957,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             '••••••••',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 16,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w400,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
                                                               height: 1.50,
                                                             ),
                                                           ),
@@ -888,8 +1001,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                         child: Container(
                                                           width: 20,
                                                           height: 20,
-                                                          clipBehavior: Clip.antiAlias,
-                                                          decoration: BoxDecoration(),
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(),
                                                           child: Stack(),
                                                         ),
                                                       ),
@@ -938,10 +1053,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             'Confirm Password',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 12,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w700,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
                                                               height: 1.33,
                                                             ),
                                                           ),
@@ -954,7 +1075,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 251.66,
                                                 top: 0,
-                                                child: Container(width: 77, height: 16),
+                                                child: Container(
+                                                  width: 77,
+                                                  height: 16,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -979,9 +1103,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                     shape: RoundedRectangleBorder(
                                                       side: BorderSide(
                                                         width: 1,
-                                                        color: const Color(0xFFE0E0E0),
+                                                        color: const Color(
+                                                          0xFFE0E0E0,
+                                                        ),
                                                       ),
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            20,
+                                                          ),
                                                     ),
                                                   ),
                                                   child: Stack(
@@ -995,10 +1124,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                           child: Text(
                                                             '••••••••',
                                                             style: TextStyle(
-                                                              color: const Color(0xFF212121),
+                                                              color:
+                                                                  const Color(
+                                                                    0xFF212121,
+                                                                  ),
                                                               fontSize: 16,
-                                                              fontFamily: 'Inter',
-                                                              fontWeight: FontWeight.w400,
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
                                                               height: 1.50,
                                                             ),
                                                           ),
@@ -1074,7 +1209,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                       color: Colors.white,
                                                       fontSize: 18,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w700,
+                                                      fontWeight:
+                                                          FontWeight.w700,
                                                       height: 1.56,
                                                     ),
                                                   ),
@@ -1118,10 +1254,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                   child: Text(
                                                     'Already have an account?',
                                                     style: TextStyle(
-                                                      color: const Color(0xFF757575),
+                                                      color: const Color(
+                                                        0xFF757575,
+                                                      ),
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w400,
+                                                      fontWeight:
+                                                          FontWeight.w400,
                                                       height: 1.43,
                                                     ),
                                                   ),
@@ -1142,7 +1281,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                               Positioned(
                                                 left: 0,
                                                 top: 0,
-                                                child: Container(width: 73, height: 20),
+                                                child: Container(
+                                                  width: 73,
+                                                  height: 20,
+                                                ),
                                               ),
                                               Positioned(
                                                 left: 85.36,
@@ -1156,9 +1298,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                         left: -91.20,
                                                         top: 0,
                                                         child: Row(
-                                                          mainAxisSize: MainAxisSize.min,
-                                                          mainAxisAlignment: MainAxisAlignment.start,
-                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          mainAxisSize:
+                                                              MainAxisSize.min,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .start,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
                                                           spacing: 4,
                                                           children: [
                                                             SizedBox(
@@ -1166,12 +1313,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                               height: 17,
                                                               child: Text(
                                                                 'Login Now',
-                                                                textAlign: TextAlign.center,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
                                                                 style: TextStyle(
-                                                                  color: const Color(0xFFCF8307),
+                                                                  color: const Color(
+                                                                    0xFFCF8307,
+                                                                  ),
                                                                   fontSize: 14,
-                                                                  fontFamily: 'Inter',
-                                                                  fontWeight: FontWeight.w700,
+                                                                  fontFamily:
+                                                                      'Inter',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w700,
                                                                   height: 1.43,
                                                                 ),
                                                               ),
@@ -1186,16 +1340,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                                     top: 1.50,
                                                                     child: SizedBox(
                                                                       width: 9,
-                                                                      height: 17,
+                                                                      height:
+                                                                          17,
                                                                       child: Text(
                                                                         '|',
-                                                                        textAlign: TextAlign.center,
+                                                                        textAlign:
+                                                                            TextAlign.center,
                                                                         style: TextStyle(
-                                                                          color: const Color(0x4C757474),
-                                                                          fontSize: 14,
-                                                                          fontFamily: 'Inter',
-                                                                          fontWeight: FontWeight.w700,
-                                                                          height: 1.43,
+                                                                          color: const Color(
+                                                                            0x4C757474,
+                                                                          ),
+                                                                          fontSize:
+                                                                              14,
+                                                                          fontFamily:
+                                                                              'Inter',
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          height:
+                                                                              1.43,
                                                                         ),
                                                                       ),
                                                                     ),
@@ -1205,12 +1367,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                                             ),
                                                             Text(
                                                               'تسجيل الدخول',
-                                                              textAlign: TextAlign.center,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
                                                               style: TextStyle(
-                                                                color: const Color(0xFFCF8307),
+                                                                color:
+                                                                    const Color(
+                                                                      0xFFCF8307,
+                                                                    ),
                                                                 fontSize: 14,
-                                                                fontFamily: 'Inter',
-                                                                fontWeight: FontWeight.w700,
+                                                                fontFamily:
+                                                                    'Inter',
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w700,
                                                                 height: 1.43,
                                                               ),
                                                             ),
