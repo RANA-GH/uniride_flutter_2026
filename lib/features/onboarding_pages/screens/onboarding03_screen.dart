@@ -20,13 +20,13 @@ class Onboarding03Screen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.053),
           child: Column(
             children: [
-              TopBar(showSkip: false), 
+              TopBar(showSkip: false),
 
               SizedBox(height: screenHeight * 0.068),
 
               Expanded(
                 child: const OnboardingWidget(
-                  image: 'assets/images/onbor03.png',
+                  image: 'assets/images/onbodaring03.svg',
                   title: 'Connected Rides, be \nConnected',
                   description:
                       'Choose your ride, set your schedule, and enjoy hassle-free campus transportation.',
@@ -41,6 +41,18 @@ class Onboarding03Screen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, Routes.signup);
                   },
+                  child: Center(
+                    child: Text(
+                      'Go',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.30,
+                      ),
+                    ),
+                  ),
                 ),
               ),
 

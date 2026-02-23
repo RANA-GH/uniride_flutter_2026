@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uniride/features/splash_pages/splash02_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,23 +15,19 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) =>  Splash02Screen()),
+        MaterialPageRoute(builder: (context) => Splash02Screen()),
       );
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: const Color(0xFFCF8307),
       body: Center(
-        child: Image.asset(
-          'assets/images/logo.png',
-          width: screenWidth * 0.47,
-          height: screenHeight * 0.47 * (193 / 176.73),
-          fit: BoxFit.contain,
+        child: SvgPicture.asset(
+          'assets/images/logo.svg',
+          width: MediaQuery.of(context).size.width * 0.35,
         ),
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:uniride/core/app_routes/app_router.dart';
 import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/core/util/app_theme.dart';
@@ -32,23 +31,18 @@ class MainApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
 
-          // 🔹 Routing
           initialRoute: Routes.splash,
           onGenerateRoute: AppRouter.onGenerateRoute,
 
-          // 🔹 Localization
           locale: Locale(languagePro.appLanguage),
           supportedLocales: AppLocalizations.supportedLocales,
-          localizationsDelegates:
-              AppLocalizations.localizationsDelegates,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
 
-          // 🔹 Theme
           themeMode: themePro.appTheme,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
         );
       },
-
     );
   }
 }

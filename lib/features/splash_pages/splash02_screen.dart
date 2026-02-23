@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:uniride/core/providers/app_language_provider.dart';
 import 'package:uniride/core/widgets/Language_ToggleButton_widget.dart';
@@ -17,19 +18,15 @@ class Splash02Screen extends StatefulWidget {
 class _Splash02ScreenState extends State<Splash02Screen> {
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
     return Consumer<AppLanguageProvider>(
       builder: (context, languagePro, child) {
-        final isArabic = languagePro.appLanguage == 'ar';
         return Scaffold(
           backgroundColor: Colors.transparent,
           body: Stack(
             children: [
-              SizedBox(
-                width: double.infinity,
-                height: screenHeight,
-                child: Image.asset(
-                  'assets/images/splash02_bg.png',
+              Positioned.fill(
+                child: SvgPicture.asset(
+                  'assets/images/splash02.svg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -73,19 +70,17 @@ class _Splash02ScreenState extends State<Splash02Screen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              
-                                  Text(
-                                    AppLocalizations.of(context)!.getstarted,
-                                    style: TextStyle(
-                                      color: Color(0xFFCF8307),
-                                      fontSize: 18,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w700,
-                                      height: 1.20,
-                                    ),
-                                  ),
-                                
-                              
+                              Text(
+                                AppLocalizations.of(context)!.getstarted,
+                                style: TextStyle(
+                                  color: Color(0xFFCF8307),
+                                  fontSize: 18,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.20,
+                                ),
+                              ),
+
                               SizedBox(width: 8),
                               Icon(
                                 Icons.arrow_forward,

@@ -29,7 +29,7 @@ class _Onboarding02ScreenState extends State<Onboarding02Screen> {
 
               Expanded(
                 child: const OnboardingWidget(
-                  image: 'assets/images/onbo02.png',
+                  image: 'assets/images/onbodaring02.svg',
                   title: 'Book • Track • Arrive',
                   description:
                       'Seamless booking, real-time tracking, and reliable transport for every university day.',
@@ -48,6 +48,7 @@ class _Onboarding02ScreenState extends State<Onboarding02Screen> {
                       arguments: {'withFade': true},
                     );
                   },
+                  child: Icon(Icons.arrow_forward, color: Colors.white, size: 30),
                 ),
               ),
 

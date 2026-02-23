@@ -5,19 +5,21 @@ import 'dart:math';
 
 class CircleArrowButton extends StatelessWidget {
   final VoidCallback onPressed;
-  final double progress; // 0.0 → 1.0
+  final double progress;
+  final Widget child;
 
   const CircleArrowButton({
     super.key,
     required this.onPressed,
     required this.progress,
+    required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
     const double size = 90;
     const double strokeWidth = 6;
-    const double gap = 8; 
+    const double gap = 8;
 
     return SizedBox(
       width: size,
@@ -33,7 +35,6 @@ class CircleArrowButton extends StatelessWidget {
             ),
           ),
 
-         
           Material(
             shape: const CircleBorder(),
             color: const Color(0xFFCF8307),
@@ -43,11 +44,7 @@ class CircleArrowButton extends StatelessWidget {
               child: SizedBox(
                 width: size - (gap * 2) - strokeWidth,
                 height: size - (gap * 2) - strokeWidth,
-                child: const Icon(
-                  Icons.arrow_forward,
-                  color: Colors.white,
-                  size: 30,
-                ),
+                child: child,
               ),
             ),
           ),

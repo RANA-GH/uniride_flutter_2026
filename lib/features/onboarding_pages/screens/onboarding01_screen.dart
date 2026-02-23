@@ -28,7 +28,7 @@ class _Onboarding01ScreenState extends State<Onboarding01Screen> {
 
               /// 🔹 Content (Reusable Widget)
               const OnboardingWidget(
-                image: 'assets/images/onbo01.png',
+                image: 'assets/images/onbodaring01.svg',
                 title: 'Smart Campus Transportation',
                 description:
                     'Seamless booking, real-time tracking, and reliable transport for every university day.',
@@ -45,6 +45,8 @@ class _Onboarding01ScreenState extends State<Onboarding01Screen> {
                        Routes.onBoarding02 ,
                        );
                   },
+                  child: Icon(Icons.arrow_forward, color: Colors.white, size: 30),
+
                 ),
               ),
 
