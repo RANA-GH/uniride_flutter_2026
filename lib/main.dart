@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
+import 'package:uniride/core/app_routes/app_router.dart';
+import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/core/util/app_theme.dart';
-import 'package:uniride/features/splash_pages/splash01_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:uniride/l10n/app_localizations.dart';
 import 'core/providers/app_language_provider.dart';
@@ -23,24 +25,30 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => AppLanguageProvider(),
-      child: Consumer<AppLanguageProvider>(
-        builder: (context, languagePro, child) {
-          var themePro = Provider.of<AppThemeProvider>(context);
-          return MaterialApp(
-            locale: Locale(languagePro.appLanguage),
-            supportedLocales: AppLocalizations.supportedLocales,
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            themeMode: themePro.appTheme,
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
-            debugShowCheckedModeBanner: false,
-            
-            home: SplashScreen(),
-          );
-        },
-      ),
+    return Consumer<AppLanguageProvider>(
+      builder: (context, languagePro, child) {
+        var themePro = Provider.of<AppThemeProvider>(context);
+
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+
+          // 🔹 Routing
+          initialRoute: Routes.splash,
+          onGenerateRoute: AppRouter.onGenerateRoute,
+
+          // 🔹 Localization
+          locale: Locale(languagePro.appLanguage),
+          supportedLocales: AppLocalizations.supportedLocales,
+          localizationsDelegates:
+              AppLocalizations.localizationsDelegates,
+
+          // 🔹 Theme
+          themeMode: themePro.appTheme,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+        );
+      },
+
     );
   }
 }

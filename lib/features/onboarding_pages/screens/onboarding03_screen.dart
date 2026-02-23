@@ -4,7 +4,6 @@ import 'package:uniride/core/theme/app_colors.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/CircleArrowButton_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/onboarding_widget.dart';
 import 'package:uniride/features/onboarding_pages/presentation/widgets/tobBar_widget.dart';
-import 'package:uniride/features/signup/presentation/signup_screen.dart';
 
 class Onboarding03Screen extends StatelessWidget {
   const Onboarding03Screen({super.key});
