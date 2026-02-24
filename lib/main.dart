@@ -32,8 +32,8 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
 
           initialRoute: Routes.splash,
-          onGenerateRoute: AppRouter.onGenerateRoute,
 
+          onGenerateRoute: AppRouter.onGenerateRoute,
           locale: Locale(languagePro.appLanguage),
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,

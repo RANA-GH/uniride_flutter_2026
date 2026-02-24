@@ -1,11 +1,10 @@
 // ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
 import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding02_screen.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding03_screen.dart';
-import 'package:uniride/features/signup/presentation/signup_screen.dart';
+import 'package:uniride/features/signup/screens/signup_screen.dart';
 import 'package:uniride/features/splash_pages/splash01_screen.dart';
 
 class AppRouter {
@@ -99,7 +98,7 @@ class AppRouter {
         return PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 1200),
           pageBuilder: (context, animation, secondaryAnimation) =>
-              const SignUpScreen(),
+              SignUpScreen(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             final offsetAnimation = Tween<Offset>(
               begin: const Offset(1, 0), // slide from right
