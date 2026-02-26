@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-class InputField extends StatelessWidget {
+
+class InputField extends StatefulWidget {
   final IconData icon;
   final String label;
   final String hint;
   final bool obscure;
+  final Widget? suffixIcon;
 
   final String? helperText;
   const InputField({
@@ -12,14 +14,22 @@ class InputField extends StatelessWidget {
     required this.hint,
     this.obscure = false,
     this.helperText,
+    this.suffixIcon,
   });
+
+  @override
+  State<InputField> createState() => _InputFieldState();
+}
+
+class _InputFieldState extends State<InputField> {
   @override
   Widget build(BuildContext context) {
+     bool _obscurePassword = true;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          label,
+          widget.label,
           style: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w500,
@@ -28,13 +38,29 @@ class InputField extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         TextField(
-          obscureText: obscure,
+          obscureText: widget.obscure,
 
           decoration: InputDecoration(
             isDense: true,
-            prefixIcon: Icon(icon, size: 18, color: const Color(0xFF757575)),
-            hintText: hint,
-            helperText: helperText,
+            suffixIcon: 
+                       IconButton(
+                        icon: Icon(
+                          _obscurePassword
+                              ? Icons.visibility_off
+                              : Icons.visibility,
+                          color: const Color(0xFF757575),
+                        ),
+                        onPressed: () => setState(
+                          () => _obscurePassword = !_obscurePassword,
+                        ),
+                      ),
+            suffixIconConstraints: const BoxConstraints(
+              minHeight: 40,
+              minWidth: 40,
+            ),
+            prefixIcon: Icon(widget.icon, size: 18, color: const Color(0xFF757575)),
+            hintText: widget.hint,
+            helperText: widget.helperText,
             helperMaxLines: 2,
             helperStyle: const TextStyle(
               color: const Color(0xFF757575),

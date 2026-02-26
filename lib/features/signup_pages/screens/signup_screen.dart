@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:uniride/features/signin_pages/signin_screen.dart';
 import 'package:uniride/features/signup_pages/presentation/widget/build_drive.dart';
 import 'package:uniride/features/signup_pages/presentation/widget/buildstudent.dart';
 import 'package:uniride/features/signup_pages/presentation/widget/build_tab.dart';
@@ -10,29 +11,11 @@ class SignUpScreen extends StatefulWidget {
   State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen>
-    with SingleTickerProviderStateMixin {
-  late TabController _tabController;
+class _SignUpScreenState extends State<SignUpScreen> {
   bool isDriver = false;
 
   @override
-  void initState() {
-    _tabController = TabController(length: 2, vsync: this);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _tabController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return buildTextField('');
-  }
-
-  Widget buildTextField(String hint, {bool isPassword = false}) {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
@@ -47,7 +30,7 @@ class _SignUpScreenState extends State<SignUpScreen>
         title: const Text(
           'Sign Up',
           style: TextStyle(
-            color: const Color(0xFF757575),
+            color: Color(0xFF757575),
             fontSize: 18,
             fontFamily: 'Inter',
             fontWeight: FontWeight.w700,
@@ -76,7 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen>
               ),
               child: Column(
                 children: [
-                  // التابات
+                  // Tabs
                   Container(
                     padding: const EdgeInsets.all(4),
                     decoration: BoxDecoration(
@@ -97,7 +80,8 @@ class _SignUpScreenState extends State<SignUpScreen>
 
                   const SizedBox(height: 24),
 
-                  if (!isDriver) buildStudentForm() else _buildDriverForm(),
+                  // 🔥 هنا أهم تعديل — بدون const
+                  if (!isDriver) StudentForm() else DriveForm(),
 
                   const SizedBox(height: 24),
 
@@ -105,7 +89,14 @@ class _SignUpScreenState extends State<SignUpScreen>
                     width: double.infinity,
                     height: 52,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SigninScreen(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFFF9800),
                         foregroundColor: Colors.white,
@@ -118,7 +109,6 @@ class _SignUpScreenState extends State<SignUpScreen>
                         'Sign Up',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: 18,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
@@ -156,9 +146,8 @@ class _SignUpScreenState extends State<SignUpScreen>
                           const SizedBox(width: 4),
                           const Text(
                             '|',
-                            textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: const Color(0x4C757474),
+                              color: Color(0x4C757474),
                               fontSize: 14,
                               fontFamily: 'Inter',
                               fontWeight: FontWeight.w700,
@@ -208,8 +197,4 @@ class _SignUpScreenState extends State<SignUpScreen>
       ),
     );
   }
-
-  Widget buildStudentForm() => const StudentForm();
-
-  Widget _buildDriverForm() => const DriveForm();
 }

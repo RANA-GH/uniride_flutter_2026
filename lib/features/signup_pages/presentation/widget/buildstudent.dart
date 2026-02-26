@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:uniride/features/signup_pages/presentation/widget/input_field.dart';
 
-class StudentForm extends StatelessWidget {
+class StudentForm extends StatefulWidget {
   const StudentForm({super.key});
+
+  @override
+  State<StudentForm> createState() => _StudentFormState();
+}
+
+class _StudentFormState extends State<StudentForm> {
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +48,19 @@ class StudentForm extends StatelessWidget {
           icon: Icons.lock_outline,
           label: 'Password',
           hint: '••••••••',
+          suffixIcon: IconButton(
+            icon: Icon(
+              _obscurePassword ? Icons.visibility_off : Icons.visibility,
+              color: const Color(0xFF757575),
+            ),
+            onPressed: () {
+              setState(() {
+                _obscurePassword = !_obscurePassword;
+              });
+            },
+          ),
           helperText: 'Minimum 8 characters',
-          obscure: true,
+          obscure: _obscurePassword,
         ),
         SizedBox(height: 16),
         InputField(

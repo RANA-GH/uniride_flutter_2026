@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:uniride/features/signup_pages/presentation/widget/input_field.dart';
 import 'package:uniride/features/signup_pages/presentation/widget/section_title.dart';
 
-class DriveForm extends StatelessWidget {
+class DriveForm extends StatefulWidget {
   const DriveForm({super.key});
+
+  @override
+  State<DriveForm> createState() => _DriveFormState();
+}
+
+class _DriveFormState extends State<DriveForm> {
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -35,13 +42,23 @@ class DriveForm extends StatelessWidget {
           hint: '059XXXXXXX',
         ),
         const SizedBox(height: 16),
-        const InputField(
-          icon: Icons.lock_outline,
-          label: 'Password',
-          hint: '••••••••',
-          helperText: 'Minimum 8 characters',
-          obscure: true,
-        ),
+       InputField(
+  icon: Icons.lock_outline,
+  label: 'Password',
+  hint: '••••••••',
+  helperText: 'Minimum 8 characters',
+  obscure: _obscurePassword,
+  suffixIcon: IconButton(
+    icon: Icon(
+      _obscurePassword ? Icons.visibility_off : Icons.visibility,
+    ),
+    onPressed: () {
+      setState(() {
+        _obscurePassword = !_obscurePassword;
+      });
+    },
+  ),
+),
         const SizedBox(height: 16),
         const InputField(
           icon: Icons.lock_outline,
