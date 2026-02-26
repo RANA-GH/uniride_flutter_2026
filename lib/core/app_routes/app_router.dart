@@ -4,7 +4,7 @@ import 'package:uniride/core/app_routes/routes.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding01_screen.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding02_screen.dart';
 import 'package:uniride/features/onboarding_pages/screens/onboarding03_screen.dart';
-import 'package:uniride/features/signup/screens/signup_screen.dart';
+import 'package:uniride/features/signup_pages/screens/signup_screen.dart';
 import 'package:uniride/features/splash_pages/splash01_screen.dart';
 
 class AppRouter {

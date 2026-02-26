@@ -1,7 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:uniride/features/signup/presentation/widget/input_field.dart';
-import 'package:uniride/features/signup/presentation/widget/section_title.dart';
+import 'package:uniride/features/signup_pages/presentation/widget/input_field.dart';
+import 'package:uniride/features/signup_pages/presentation/widget/section_title.dart';
 
 class DriveForm extends StatelessWidget {
   const DriveForm({super.key});

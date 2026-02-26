@@ -1,9 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:uniride/features/signup/presentation/widget/build_drive.dart';
-import 'package:uniride/features/signup/presentation/widget/buildstudent.dart';
-import 'package:uniride/features/signup/presentation/widget/build_tab.dart';
+import 'package:uniride/features/signup_pages/presentation/widget/build_drive.dart';
+import 'package:uniride/features/signup_pages/presentation/widget/buildstudent.dart';
+import 'package:uniride/features/signup_pages/presentation/widget/build_tab.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override

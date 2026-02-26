@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniride/features/signup/presentation/widget/input_field.dart';
+import 'package:uniride/features/signup_pages/presentation/widget/input_field.dart';
 
 class StudentForm extends StatelessWidget {
   const StudentForm({super.key});
